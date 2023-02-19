@@ -1,0 +1,25 @@
+{
+  "name": "__MSG_name__",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "default_locale": "en",
+  "description": "__MSG_description__",
+  "icons": {
+    "16": "./icons/image16.png",
+    "64": "./icons/image64.png",
+    "128": "./icons/image128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.alexander-schleicher.de/*"],
+      "run_at": "document_idle",
+      "all_frames": false,
+      "js": ["content-script.js"]
+    }
+  ],
+  "host_permissions": ["https://www.alexander-schleicher.de/*"],
+  "web_accessible_resources": [{
+    "resources": ["content-script.css"],
+    "matches": ["https://www.alexander-schleicher.de/*"]
+  }]
+}

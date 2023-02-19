@@ -1,0 +1,15 @@
+a {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    padding: 0.2em;
+    background: #ffe224;
+    font-size: 12px;
+    color: black;
+    border-radius: 3px;
+    text-decoration: none;
+    z-index: 12;
+}
+a:hover {
+    background: #dcdc00;
+}

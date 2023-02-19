@@ -1,0 +1,10 @@
+{
+  "name": {
+    "message": "Download Image",
+    "description": "extension name"
+  },
+  "description": {
+    "message": "Download images from site",
+    "description": "Download images from site description"
+  }
+}
