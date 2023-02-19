@@ -8,6 +8,8 @@ const imgEs = document.querySelectorAll('img');
     // for each images more than 150x150
     if (el.width > 150 || el.height > 150) {
 
+        //connect css for chrome (see manifest)
+        const cssUrl = chrome.runtime.getURL('content-script.css')
         // got parent element over img
         let elParent = el.parentElement;
 
@@ -17,8 +19,6 @@ const imgEs = document.querySelectorAll('img');
         const shadowRoot = root.attachShadow({mode: 'open'})
         shadowRoot.innerHTML = `<link rel='stylesheet' href='${cssUrl}'></link>`
 
-        //connect css for chrome (see manifest)
-        const cssUrl = chrome.runtime.getURL('content-script.css')
 
         const linkButton = document.createElement('a');
         linkButton.innerText = 'Download';
